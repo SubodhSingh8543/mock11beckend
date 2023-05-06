@@ -47,7 +47,7 @@ routes.post("/login", async (req, res) => {
     }
 })
 
-routes.post("/books",authenticated,async (req,res) => {
+routes.post("/books",async (req,res) => {
     const payload = req.body;
     try {
         const bookData = await new BookModel(payload);
